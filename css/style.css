@@ -1,7 +1,9 @@
 * {
     background: beige;
 }
-
+nav ul li{
+    display: inline;
+}
 ol {
     color: blue;
 }
