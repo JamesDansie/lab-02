@@ -16,8 +16,12 @@ h1{
 h3{
     font-size: 14 px;
     font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    /* padding-bottom: 10px; */
+}
+header{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 main{
     padding: 10 px;
