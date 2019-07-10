@@ -41,13 +41,14 @@ console.log('the swallowSpeed var is ' + swallowSpeed);
 console.log('the dead var is ' + dead);
 console.log('the fleshWound var is ' + fleshWound);
 
+//6th question
 var numGuess = 1;
 while(numGuess <= 4){
     //input validation
     while(true){
         var userNum = prompt('From Hitch Hiker\'s Guide to the Galaxy, what is the meaning of life?');
         userNum = Number(userNum);
-        console.log(userNum);
+        console.log('The user number is for hitch hike is '+userNum);
         //If it is not a number it will return NaN which will be false in an if statement
         if(userNum){
             break;
@@ -64,4 +65,29 @@ while(numGuess <= 4){
         alert(userName + ' guess lower, and read Hitch Hiker\'s guide (and bring a towel). You have '+(4-numGuess)+' guesses left.');
     }
     numGuess++
+}
+
+//7th question
+var characters = ['Marvin the Paranoid Andriod', 'Ford Perfect', 'Dirk Gently', 'Authur Dent', 'Trillian', 'Random Dent', 'Zaphod Beeblebrox', 'Slartibartfast', 'George Gently']
+var escape = false;
+var numGuess = 1;
+//while the guess is less than 6 and escape is not approved they are trapped in the while loop
+
+while(numGuess <= 6 && escape === false){
+    var userGuess = prompt("Name a character from Hitch Hiker's Guide to the Galaxy");
+    console.log('The user guess is charaters is '+userGuess)
+
+    //for loop to check each element in the array
+    for(var i = 0; i < characters.length; i++){
+        //if there's a match we celebrate and approve escape
+        if(userGuess === characters[i]){
+            alert('YUSSS! Another hitch hiker nerd! <3');
+            escape = true;
+        }
+    }
+
+    //if escape is still false then keep guessing
+    if(!escape){
+        alert('Keep guessing!');
+    }
 }
