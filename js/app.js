@@ -34,6 +34,14 @@ if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
     alert('Go watch Monty Python Holy Grail' + userName);
 }
 
+console.log('the userName is ' + userName);
+console.log('the quest var is ' + quest);
+console.log('the color var is ' + color);
+console.log('the swallowSpeed var is ' + swallowSpeed);
+console.log('the dead var is ' + dead);
+console.log('the fleshWound var is ' + fleshWound);
+
+//These are the original questions, but the monty python stuff is more fun
 
 // //Chinese food question
 // var likesChineseFood = prompt('Does you like Chinese food?');
