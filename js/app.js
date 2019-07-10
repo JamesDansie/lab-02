@@ -1,22 +1,28 @@
 'use strict';
 //User's name
 var userName = prompt('What is your name?');
+var correctGuess = 0;
 
 //quest prompt
 var quest = prompt('Is your quest to seek the holy grail?');
 if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
     //color prompt
+    correctGuess++;
     var color = prompt('Is your favorite color green?');
     if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
         //swallow prompt
+        correctGuess++;
         var swallowSpeed = prompt('Do you know the speed of laden swallow?');
         if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
             //bring out your dead
+            correctGuess++;
             var dead = prompt('Did you bring out your dead?');
             if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
                 //flesh wound
+                correctGuess++;
                 var fleshWound = prompt('Is that mearly a flesh wound?');
                 if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
+                    correctGuess++;
                     alert(userName + "! You are a true monty python nerd. Good job friend. Now go outside, it's good for you.");
                 }else{
                     alert('Go watch Monty Python Holy Grail');
@@ -31,7 +37,7 @@ if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
         alert('Go watch Monty Python Holy Grail ' + userName);
     }
 } else {
-    alert('Go watch Monty Python Holy Grail' + userName);
+    alert('Go watch Monty Python Holy Grail ' + userName);
 }
 
 console.log('the userName is ' + userName);
@@ -58,6 +64,7 @@ while(numGuess <= 4){
     }
     if(userNum === 42){
         alert('Good job ' + userName +'! Nerd skills +1000');
+        correctGuess++;
         break;
     }else if(userNum < 42){
         alert(userName + ' a little higher (also go read Hitch Hiker\'s guide (and bring a towel). You have '+(4-numGuess)+' guesses left.');
@@ -80,14 +87,17 @@ while(numGuess <= 6 && escape === false){
     //for loop to check each element in the array
     for(var i = 0; i < characters.length; i++){
         //if there's a match we celebrate and approve escape
-        if(userGuess === characters[i]){
+        if(userGuess.toLowerCase() === characters[i].toLowerCase()){
             alert('YUSSS! Another hitch hiker nerd! <3');
             escape = true;
+            correctGuess++;
         }
     }
 
     //if escape is still false then keep guessing
     if(!escape){
-        alert('Keep guessing!');
+        alert('Keep guessing! You have '+(6-numGuess)+' guesses left.');
     }
 }
+
+alert('You got '+correctGuess+' correct answers. There are 7 possible. Will the missing answers haunt you?')
