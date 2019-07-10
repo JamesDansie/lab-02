@@ -29,25 +29,18 @@ nav{
     padding: 15px;
     letter-spacing: 0.8em;
 }
-nav ul li{
-    float: left;
-    width: 33%;
-    margin-left: auto;
-    margin-right: auto;
-}
+
 ol {
     color: blue;
 }
 p{
     text-indent: 2em;
 }
-ul a{
+nav a{
+    float: left;
     background-color: pink;
     border: 1px solid;
     padding: 5px;
-    width: 33%;
-}
-
-.teal {
-    color: teal;
+    width: 30%;
+    text-align: center;
 }
