@@ -10,6 +10,9 @@ div{
     margin: 20px auto 20px auto;
     text-align: center;
 }
+em{
+    font-weight: bold;
+}
 h1{
     width: 100%;
     text-align: center;
@@ -26,6 +29,12 @@ h3{
 }
 header{
     padding-bottom: 20px;
+}
+#leftBottom{
+    font-size: 24px;
+}
+#leftBottomH{
+    font-size: 36px;
 }
 main{
     padding: 10px;
@@ -46,15 +55,24 @@ nav a{
     float: left;
     background-color: pink;
     border: 1px solid;
-    padding: 10px;
-    width: 31%;
+    padding: 10px 0 10px 0;
+    width: 33%;
     text-align: center;
+}
+#rightBottom{
+    font-size: 24px;
+}
+#rightBottomH{
+    font-size: 36px;
 }
 #split{
     width: 100%; 
 }
 #split div{
     width: 40%;
+}
+sub{
+    vertical-align: sub;
 }
 #summary{
     font-size: 20px;

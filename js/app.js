@@ -99,5 +99,7 @@ while(numGuess <= 6 && escape === false){
         alert('Keep guessing! You have '+(6-numGuess)+' guesses left.');
     }
 }
+alert("The correct answers for Hitch Hikers characters are; 'Marvin the Paranoid Andriod', 'Ford Perfect', 'Dirk Gently', 'Authur Dent', 'Trillian', 'Random Dent', 'Zaphod Beeblebrox', 'Slartibartfast', 'George Gently'")
+
 
 alert('You got '+correctGuess+' correct answers. There are 7 possible. Will the missing answers haunt you?')
