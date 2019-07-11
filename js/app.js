@@ -3,49 +3,49 @@
 var userName = prompt('What is your name?');
 var correctGuess = 0;
 
-// //quest prompt
-// var quest = prompt('Is your quest to seek the holy grail?');
-// if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
-//     //color prompt
-//     correctGuess++;
-//     var color = prompt('Is your favorite color green?');
-//     if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
-//         //swallow prompt
-//         correctGuess++;
-//         var swallowSpeed = prompt('Do you know the speed of laden swallow?');
-//         if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
-//             //bring out your dead
-//             correctGuess++;
-//             var dead = prompt('Did you bring out your dead?');
-//             if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
-//                 //flesh wound
-//                 correctGuess++;
-//                 var fleshWound = prompt('Is that mearly a flesh wound?');
-//                 if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
-//                     correctGuess++;
-//                     alert(userName + "! You are a true monty python nerd. Good job friend. Now go outside, it's good for you.");
-//                 }else{
-//                     alert('Go watch Monty Python Holy Grail');
-//                 }
-//             }else{
-//                 alert('Go watch Monty Python Holy Grail ' + userName);
-//             }
-//         }else{
-//             alert('Go watch Monty Python Holy Grail ' + userName);
-//         }
-//     } else {
-//         alert('Go watch Monty Python Holy Grail ' + userName);
-//     }
-// } else {
-//     alert('Go watch Monty Python Holy Grail ' + userName);
-// }
+// quest prompt
+var quest = prompt('Is your quest to seek the holy grail?');
+if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
+    //color prompt
+    correctGuess++;
+    var color = prompt('Is your favorite color green?');
+    if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
+        //swallow prompt
+        correctGuess++;
+        var swallowSpeed = prompt('Do you know the speed of laden swallow?');
+        if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
+            //bring out your dead
+            correctGuess++;
+            var dead = prompt('Did you bring out your dead?');
+            if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
+                //flesh wound
+                correctGuess++;
+                var fleshWound = prompt('Is that mearly a flesh wound?');
+                if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
+                    correctGuess++;
+                    alert(userName + "! You are a true monty python nerd. Good job friend. Now go outside, it's good for you.");
+                }else{
+                    alert('Go watch Monty Python Holy Grail');
+                }
+            }else{
+                alert('Go watch Monty Python Holy Grail ' + userName);
+            }
+        }else{
+            alert('Go watch Monty Python Holy Grail ' + userName);
+        }
+    } else {
+        alert('Go watch Monty Python Holy Grail ' + userName);
+    }
+} else {
+    alert('Go watch Monty Python Holy Grail ' + userName);
+}
 
-// console.log('the userName is ' + userName);
-// console.log('the quest var is ' + quest);
-// console.log('the color var is ' + color);
-// console.log('the swallowSpeed var is ' + swallowSpeed);
-// console.log('the dead var is ' + dead);
-// console.log('the fleshWound var is ' + fleshWound);
+console.log('the userName is ' + userName);
+console.log('the quest var is ' + quest);
+console.log('the color var is ' + color);
+console.log('the swallowSpeed var is ' + swallowSpeed);
+console.log('the dead var is ' + dead);
+console.log('the fleshWound var is ' + fleshWound);
 
 // -------------------6th question------------------//
 
@@ -80,34 +80,41 @@ function question6(maxGuess=4, answer=42){
     }
 
 }
-question6(2, 1000);
+
 
 //7th question
-var characters = ['Marvin the Paranoid Andriod', 'Ford Perfect', 'Dirk Gently', 'Authur Dent', 'Trillian', 'Random Dent', 'Zaphod Beeblebrox', 'Slartibartfast', 'George Gently']
-var escape = false;
-var numGuess = 1;
-//while the guess is less than 6 and escape is not approved they are trapped in the while loop
+function question7(characters, maxGuess) {
+    var escape = false;
+    var numGuess = 1;
+    
+    //while the guess is less than 6 and escape is not approved they are trapped in the while loop
+    while(numGuess <= maxGuess && escape === false){
+        var userGuess = prompt("Name a character from Hitch Hiker's Guide to the Galaxy");
+        console.log('The user guess is charaters is '+userGuess+', and the maxGuess is '+maxGuess)
+    
+        //for loop to check each element in the array
+        for(var i = 0; i < characters.length; i++){
+            //if there's a match we celebrate and approve escape
+            if(userGuess.toLowerCase() === characters[i].toLowerCase()){
+                alert('YUSSS! Another hitch hiker nerd! <3');
+                escape = true;
+                correctGuess++;
+            }
+        }
 
-while(numGuess <= 6 && escape === false){
-    var userGuess = prompt("Name a character from Hitch Hiker's Guide to the Galaxy");
-    console.log('The user guess is charaters is '+userGuess)
-
-    //for loop to check each element in the array
-    for(var i = 0; i < characters.length; i++){
-        //if there's a match we celebrate and approve escape
-        if(userGuess.toLowerCase() === characters[i].toLowerCase()){
-            alert('YUSSS! Another hitch hiker nerd! <3');
-            escape = true;
-            correctGuess++;
+        //if escape is still false then keep guessing
+        if(!escape){
+            alert('Keep guessing! You have '+(maxGuess-numGuess)+' guesses left.');
         }
     }
+    alert("The correct answers for Hitch Hikers characters are; 'Marvin the Paranoid Andriod', 'Ford Perfect', 'Dirk Gently', 'Authur Dent', 'Trillian', 'Random Dent', 'Zaphod Beeblebrox', 'Slartibartfast', 'George Gently'")
+    
+    alert('You got '+correctGuess+' correct answers. There are 7 possible. Will the missing answers haunt you?')
 
-    //if escape is still false then keep guessing
-    if(!escape){
-        alert('Keep guessing! You have '+(6-numGuess)+' guesses left.');
-    }
 }
-alert("The correct answers for Hitch Hikers characters are; 'Marvin the Paranoid Andriod', 'Ford Perfect', 'Dirk Gently', 'Authur Dent', 'Trillian', 'Random Dent', 'Zaphod Beeblebrox', 'Slartibartfast', 'George Gently'")
 
+//---------------------Executable Code-----------------------
 
-alert('You got '+correctGuess+' correct answers. There are 7 possible. Will the missing answers haunt you?')
+// question6();
+
+// question7(['Marvin the Paranoid Andriod', 'Ford Perfect', 'Dirk Gently', 'Authur Dent', 'Trillian', 'Random Dent', 'Zaphod Beeblebrox', 'Slartibartfast', 'George Gently'], 6);
