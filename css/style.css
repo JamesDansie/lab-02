@@ -32,9 +32,12 @@ header{
 }
 #leftBottom{
     font-size: 14px;
+    color:hsla(180, 50%, 50%, 0.5);
 }
 #leftBottomH{
     font-size: 36px;
+    /* color: #9b1515; */
+    color: hsl(180, 50%, 50%);
 }
 #middleBottom{
     font-size: 24px;

@@ -5,53 +5,106 @@ var correctGuess = 0;
 
 // Quest prompt
 function questFun(){
-  var quest = prompt('Is your quest to seek the holy grail?');
-  if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
-    console.log('Yahtzee. Quest!>!>!');
-    correctGuess++;
-  }else{
-    alert('Go watch Monty Python Holy Grail ' + userName);
+  //while loop for input validation
+  while(true){
+    var quest = prompt('Is your quest to seek the holy grail?');
+
+    if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
+      console.log('Yahtzee. Quest!>!>!');
+      correctGuess++;
+      break;
+
+    }else if(quest.toLowerCase() === 'n' || quest.toLowerCase() === 'no'){
+      alert('Go watch Monty Python Holy Grail ' + userName);
+      break;
+    }
+    else{
+      alert('Enter a yes or no answer');
+    }
   }
 }
+
 // Color Prompt
 function colorFun(){
-  var color = prompt('Is your favorite color green?');
-  if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
-    console.log('Yahtzee. Quest!>!>!');
-    correctGuess++;
-  }else{
-    alert('Go watch Monty Python Holy Grail ' + userName);
+  //while loop for input validation
+  while(true){
+    var color = prompt('Is your favorite color green?');
+
+    if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
+      console.log('Yahtzee. Quest!>!>!');
+      correctGuess++;
+      break;
+
+    }else if(color.toLowerCase() === 'n' || color.toLowerCase() === 'no'){
+      alert('Go watch Monty Python Holy Grail ' + userName);
+      break;
+
+    }else{
+      alert('Enter a yes or no answer');
+    }
   }
 }
+
 // Swallow prompt
 function swallowFun(){
-  var swallowSpeed = prompt('Do you know the speed of laden swallow?');
-  if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
-    console.log('Yahtzee. Quest!>!>!');
-    correctGuess++;
-  }else{
-    alert('Go watch Monty Python Holy Grail ' + userName);
+  //while loop for input validation
+  while(true){
+    var swallowSpeed = prompt('Do you know the speed of laden swallow?');
+
+    if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
+      console.log('Yahtzee. Quest!>!>!');
+      correctGuess++;
+      break;
+
+    }else if(swallowSpeed.toLowerCase() === 'y' || swallowSpeed.toLowerCase() ==='yes'){
+      alert('Go watch Monty Python Holy Grail ' + userName);
+      break;
+
+    }else{
+      alert('Enter a yes or no answer');
+    }
   }
 }
+
 // Dead prompt
 function deadFun(){
-  var dead = prompt('Did you bring out your dead?');
-  if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
-    console.log('Yahtzee. Quest!>!>!');
-    correctGuess++;
-  }else{
-    alert('Go watch Monty Python Holy Grail ' + userName);
+  //while loop for input validation
+  while(true){
+    var dead = prompt('Did you bring out your dead?');
+
+    if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
+      console.log('Yahtzee. Quest!>!>!');
+      correctGuess++;
+      break;
+
+    }else if(dead.toLowerCase() === 'n' || dead.toLowerCase() === 'no'){
+      alert('Go watch Monty Python Holy Grail ' + userName);
+      break;
+
+    }else{
+      alert('Enter a yes or no answer');
+    }
   }
 }
 
 // FleshWound prompt
 function fleshwoundFun(){
-  var fleshWound = prompt('Is that mearly a flesh wound?');
-  if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
-    console.log('Yahtzee. Quest!>!>!');
-    correctGuess++;
-  }else{
-    alert('Go watch Monty Python Holy Grail ' + userName);
+  //while loop for input validation
+  while(true){
+    var fleshWound = prompt('Is that mearly a flesh wound?');
+
+    if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
+      console.log('Yahtzee. Quest!>!>!');
+      correctGuess++;
+      break;
+      
+    }else if(fleshWound.toLowerCase() === 'n' || fleshWound.toLowerCase() === 'no'){
+      alert('Go watch Monty Python Holy Grail ' + userName);
+      break;
+
+    }else{
+      alert('Enter a yes or no answer');
+    }
   }
 }
 
