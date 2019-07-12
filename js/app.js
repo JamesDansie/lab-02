@@ -3,49 +3,76 @@
 var userName = prompt('What is your name?');
 var correctGuess = 0;
 
-// quest prompt
-var quest = prompt('Is your quest to seek the holy grail?');
-if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
-    //color prompt
-    correctGuess++;
-    var color = prompt('Is your favorite color green?');
-    if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
-        //swallow prompt
-        correctGuess++;
-        var swallowSpeed = prompt('Do you know the speed of laden swallow?');
-        if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
-            //bring out your dead
-            correctGuess++;
-            var dead = prompt('Did you bring out your dead?');
-            if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
-                //flesh wound
-                correctGuess++;
-                var fleshWound = prompt('Is that mearly a flesh wound?');
-                if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
-                    correctGuess++;
-                    alert(userName + "! You are a true monty python nerd. Good job friend. Now go outside, it's good for you.");
-                }else{
-                    alert('Go watch Monty Python Holy Grail');
-                }
-            }else{
-                alert('Go watch Monty Python Holy Grail ' + userName);
-            }
-        }else{
-            alert('Go watch Monty Python Holy Grail ' + userName);
-        }
-    } else {
-        alert('Go watch Monty Python Holy Grail ' + userName);
+
+// while(true){
+//     var blah = prompt("Wildcats?");
+
+//     if(blah === 'y'){
+//         break;
+//     }else if(blah === 'n'){
+//         continue;
+//     }
+// }
+
+function questFun(){
+    var quest = prompt('Is your quest to seek the holy grail?');
+    if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
+        console.log('Yahtzee. Quest!>!>!');
+        return true;
+    }else{
+        return false;
     }
-} else {
-    alert('Go watch Monty Python Holy Grail ' + userName);
 }
 
-console.log('the userName is ' + userName);
-console.log('the quest var is ' + quest);
-console.log('the color var is ' + color);
-console.log('the swallowSpeed var is ' + swallowSpeed);
-console.log('the dead var is ' + dead);
-console.log('the fleshWound var is ' + fleshWound);
+var escape = false;
+
+while(escape === false){
+    escape = questFun();
+}
+
+// quest prompt
+// var quest = prompt('Is your quest to seek the holy grail?');
+// if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
+//     //color prompt
+//     correctGuess++;
+//     var color = prompt('Is your favorite color green?');
+//     if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
+//         //swallow prompt
+//         correctGuess++;
+//         var swallowSpeed = prompt('Do you know the speed of laden swallow?');
+//         if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
+//             //bring out your dead
+//             correctGuess++;
+//             var dead = prompt('Did you bring out your dead?');
+//             if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
+//                 //flesh wound
+//                 correctGuess++;
+//                 var fleshWound = prompt('Is that mearly a flesh wound?');
+//                 if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
+//                     correctGuess++;
+//                     alert(userName + "! You are a true monty python nerd. Good job friend. Now go outside, it's good for you.");
+//                 }else{
+//                     alert('Go watch Monty Python Holy Grail');
+//                 }
+//             }else{
+//                 alert('Go watch Monty Python Holy Grail ' + userName);
+//             }
+//         }else{
+//             alert('Go watch Monty Python Holy Grail ' + userName);
+//         }
+//     } else {
+//         alert('Go watch Monty Python Holy Grail ' + userName);
+//     }
+// } else {
+//     alert('Go watch Monty Python Holy Grail ' + userName);
+// }
+
+// console.log('the userName is ' + userName);
+// console.log('the quest var is ' + quest);
+// console.log('the color var is ' + color);
+// console.log('the swallowSpeed var is ' + swallowSpeed);
+// console.log('the dead var is ' + dead);
+// console.log('the fleshWound var is ' + fleshWound);
 
 // -------------------6th question------------------//
 
