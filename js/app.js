@@ -114,6 +114,7 @@ function question7(characters, maxGuess) {
     if(!escape){
       alert('Keep guessing! You have '+(maxGuess-numGuess)+' guesses left.');
     }
+    numGuess++;
   }
   alert('The correct answers for Hitch Hikers characters are; \'Marvin the Paranoid Andriod\', \'Ford Perfect\', \'Dirk Gently\', \'Authur Dent\', \'Trillian\', \'Random Dent\', \'Zaphod Beeblebrox\', \'Slartibartfast\', \'George Gently\'')
     

@@ -31,9 +31,15 @@ header{
     padding-bottom: 20px;
 }
 #leftBottom{
-    font-size: 24px;
+    font-size: 14px;
 }
 #leftBottomH{
+    font-size: 36px;
+}
+#middleBottom{
+    font-size: 24px;
+}
+#middleBottomH{
     font-size: 36px;
 }
 main{
@@ -69,7 +75,7 @@ nav a{
     width: 100%; 
 }
 #split div{
-    width: 40%;
+    width: 30%;
 }
 sub{
     vertical-align: sub;
