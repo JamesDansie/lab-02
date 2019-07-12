@@ -3,17 +3,7 @@
 var userName = prompt('What is your name?');
 var correctGuess = 0;
 
-
-// while(true){
-//     var blah = prompt("Wildcats?");
-
-//     if(blah === 'y'){
-//         break;
-//     }else if(blah === 'n'){
-//         continue;
-//     }
-// }
-
+// Quest prompt
 function questFun(){
     var quest = prompt('Is your quest to seek the holy grail?');
     if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
@@ -23,12 +13,26 @@ function questFun(){
         return false;
     }
 }
+// Color Prompt
+function colorFun(){
+    var color = prompt('Is your favorite color green?');
+    if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
+        console.log('Yahtzee. Quest!>!>!');
+        return true;
+    }else{
+        return false;
+    }
+}
 
 var escape = false;
 
+// -----------------Executable Code------------------//
 while(escape === false){
     escape = questFun();
+    escape = colorFun();
 }
+
+
 
 // quest prompt
 // var quest = prompt('Is your quest to seek the holy grail?');
