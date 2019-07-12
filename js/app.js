@@ -23,13 +23,48 @@ function colorFun(){
         return false;
     }
 }
+// Swallow prompt
+function swallowFun(){
+    var swallowSpeed = prompt('Do you know the speed of laden swallow?');
+    if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
+        console.log('Yahtzee. Quest!>!>!');
+        return true;
+    }else{
+        return false;
+    }
+}
+// Dead prompt
+function deadFun(){
+    var dead = prompt('Did you bring out your dead?');
+    if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
+        console.log('Yahtzee. Quest!>!>!');
+        return true;
+    }else{
+        return false;
+    }
+}
 
+// FleshWound prompt
+function fleshwoundFun(){
+    var fleshWound = prompt('Is that mearly a flesh wound?');
+    if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
+        console.log('Yahtzee. Quest!>!>!');
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// ----------------var section -----------------------//
 var escape = false;
 
 // -----------------Executable Code------------------//
 while(escape === false){
     escape = questFun();
     escape = colorFun();
+    escape = swallowFun();
+    escape = deadFun();
+    escape = fleshwoundFun();
 }
 
 
