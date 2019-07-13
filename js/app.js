@@ -6,17 +6,18 @@ var correctGuess = 0;
 // Quest prompt
 function questFun(){
   //while loop for input validation
-  while(true){
+  var trapped = true;
+  while(trapped){
     var quest = prompt('Is your quest to seek the holy grail?');
 
     if(quest.toLowerCase() === 'y' || quest.toLowerCase() === 'yes'){
       console.log('Yahtzee. Quest!>!>!');
       correctGuess++;
-      break;
+      trapped =false;
 
     }else if(quest.toLowerCase() === 'n' || quest.toLowerCase() === 'no'){
       alert('Go watch Monty Python Holy Grail ' + userName);
-      break;
+      trapped = false;
     }
     else{
       alert('Enter a yes or no answer');
@@ -27,17 +28,18 @@ function questFun(){
 // Color Prompt
 function colorFun(){
   //while loop for input validation
-  while(true){
+  var trapped=true;
+  while(trapped){
     var color = prompt('Is your favorite color green?');
 
     if(color.toLowerCase() === 'y' || color.toLowerCase() === 'yes'){
       console.log('Yahtzee. Quest!>!>!');
       correctGuess++;
-      break;
+      trapped = false;
 
     }else if(color.toLowerCase() === 'n' || color.toLowerCase() === 'no'){
       alert('Go watch Monty Python Holy Grail ' + userName);
-      break;
+      trapped = false;
 
     }else{
       alert('Enter a yes or no answer');
@@ -48,17 +50,18 @@ function colorFun(){
 // Swallow prompt
 function swallowFun(){
   //while loop for input validation
-  while(true){
+  var trapped = true;
+  while(trapped){
     var swallowSpeed = prompt('Do you know the speed of laden swallow?');
 
     if(swallowSpeed.toLowerCase() === 'n' || swallowSpeed.toLowerCase() ==='no'){
       console.log('Yahtzee. Quest!>!>!');
       correctGuess++;
-      break;
+      trapped = false;
 
     }else if(swallowSpeed.toLowerCase() === 'y' || swallowSpeed.toLowerCase() ==='yes'){
       alert('Go watch Monty Python Holy Grail ' + userName);
-      break;
+      trapped = false;
 
     }else{
       alert('Enter a yes or no answer');
@@ -69,17 +72,18 @@ function swallowFun(){
 // Dead prompt
 function deadFun(){
   //while loop for input validation
-  while(true){
+  var trapped = true;
+  while(trapped){
     var dead = prompt('Did you bring out your dead?');
 
     if(dead.toLowerCase() === 'y' || dead.toLowerCase() === 'yes'){
       console.log('Yahtzee. Quest!>!>!');
       correctGuess++;
-      break;
+      trapped = false;
 
     }else if(dead.toLowerCase() === 'n' || dead.toLowerCase() === 'no'){
       alert('Go watch Monty Python Holy Grail ' + userName);
-      break;
+      trapped = false;
 
     }else{
       alert('Enter a yes or no answer');
@@ -90,17 +94,18 @@ function deadFun(){
 // FleshWound prompt
 function fleshwoundFun(){
   //while loop for input validation
-  while(true){
+  var trapped = true;
+  while(trapped){
     var fleshWound = prompt('Is that mearly a flesh wound?');
 
     if(fleshWound.toLowerCase() === 'y' || fleshWound.toLowerCase() === 'yes'){
       console.log('Yahtzee. Quest!>!>!');
       correctGuess++;
-      break;
-      
+      trapped = false;
+
     }else if(fleshWound.toLowerCase() === 'n' || fleshWound.toLowerCase() === 'no'){
       alert('Go watch Monty Python Holy Grail ' + userName);
-      break;
+      trapped = false;
 
     }else{
       alert('Enter a yes or no answer');
@@ -113,13 +118,13 @@ function fleshwoundFun(){
 function question6(maxGuess=4, answer=42){
   var numGuess = 1;
   while(numGuess <= maxGuess){
-        
+
     //input validation
     while(true){
       var userNum = prompt('From Hitch Hiker\'s Guide to the Galaxy, what is the meaning of life?');
       userNum = Number(userNum);
       console.log('The userNum is '+userNum+', and the nmaxGuess is '+maxGuess+', and the answer is '+answer);
-            
+
       //If it is not a number it will return NaN which will be false in an if statement
       if(userNum){
         break;
@@ -137,7 +142,7 @@ function question6(maxGuess=4, answer=42){
     }else{
       alert(userName + ' guess lower, and read Hitch Hiker\'s guide (and bring a towel). You have '+(maxGuess-numGuess)+' guesses left.');
     }
-    numGuess++
+    numGuess++;
   }
 
 }
@@ -147,12 +152,11 @@ function question6(maxGuess=4, answer=42){
 function question7(characters, maxGuess) {
   var escape = false;
   var numGuess = 1;
-    
   //while the guess is less than 6 and escape is not approved they are trapped in the while loop
   while(numGuess <= maxGuess && escape === false){
     var userGuess = prompt('Name a character from Hitch Hiker\'s Guide to the Galaxy');
     console.log('The user guess is charaters is '+userGuess+', and the maxGuess is '+maxGuess)
-    
+
     //for loop to check each element in the array
     for(var i = 0; i < characters.length; i++){
       //if there's a match we celebrate and approve escape
@@ -169,9 +173,9 @@ function question7(characters, maxGuess) {
     }
     numGuess++;
   }
-  alert('The correct answers for Hitch Hikers characters are; \'Marvin the Paranoid Andriod\', \'Ford Perfect\', \'Dirk Gently\', \'Authur Dent\', \'Trillian\', \'Random Dent\', \'Zaphod Beeblebrox\', \'Slartibartfast\', \'George Gently\'')
-    
-  alert('You got '+correctGuess+' correct answers. There are 7 possible. Will the missing answers haunt you?')
+  alert('The correct answers for Hitch Hikers characters are; \'Marvin the Paranoid Andriod\', \'Ford Perfect\', \'Dirk Gently\', \'Authur Dent\', \'Trillian\', \'Random Dent\', \'Zaphod Beeblebrox\', \'Slartibartfast\', \'George Gently\'');
+
+  alert('You got '+correctGuess+' correct answers. There are 7 possible. Will the missing answers haunt you?');
 
 }
 
@@ -180,7 +184,7 @@ questFun();
 colorFun();
 swallowFun();
 deadFun();
-fleshwoundFun(); 
+fleshwoundFun();
 if(correctGuess === 5){
   alert('Good Job, you Monty Python nerd, you. There are mountains outside to climb now...it\'s good for you.');
 }
